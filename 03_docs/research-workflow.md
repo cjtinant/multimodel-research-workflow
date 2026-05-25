@@ -41,7 +41,7 @@ _Inputs:_
 - Prior work or related documents if scope is being refined rather than created
   from scratch
 - What is the destination? (GitHub repo, Google Doc, grant portal, PDF)
-- Who is the audience and what format do they expect?
+- Who is the audience and what delivery format do they expect?
 - Are there intermediate deliverables along the way?
 
 _Process:_
@@ -62,7 +62,8 @@ _Human interaction:_
 - High. The model surfaces gaps and ambiguities but does not set scope. Scope is
   an editorial judgment — the human decides what is in and out. The brief is not
   done until the human can state the exclusions in one sentence and name what
-  evidence would change their mind.
+  evidence would change their mind. The delivery format should be refined at
+  each phase boundary.
 
 ---
 
@@ -319,7 +320,9 @@ _Human interaction:_
   spot-checks the results. Flagged claims do not get silently resolved — each
   one gets an explicit human decision: cite it, mark it as speculation, or
   remove it. Unresolved flags carry forward to Synthesize as open items, not as
-  settled claims.
+  settled claims. If flagged claims require substantive revision — not just a
+  citation but a rewrite of the underlying argument — work returns to Build
+  before Validate completes.
 
 ---
 
@@ -374,13 +377,12 @@ _Human interaction:_
 
 ### 7. Package
 
-Package is not only a terminal step — the delivery format should be declared in
-Define Scope and refined at each phase boundary. A document that is correct but
-delivered in the wrong format fails.
-
-The primary archive format is a GitHub repository. Intermediate and final
-deliverables in other formats — Google Doc, PDF, grant portal submission — are
-derived from the Markdown source.
+The primary drafting format is Markdown committed to GitHub. For each
+deliverable, Package confirms the target destination and converts accordingly.
+The Markdown source is always preserved in the repo regardless of the delivery
+format. The primary archive format is a GitHub repository. Intermediate and
+final deliverables in other formats — Google Doc, PDF, grant portal submission —
+are derived from the Markdown source.
 
 _Inputs:_
 
