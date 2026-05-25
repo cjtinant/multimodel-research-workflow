@@ -1,10 +1,7 @@
 # Multi-model AI-assisted workflow — reference and SOP
 
-**Synthesized from:** claude-v01, chatgpt-v01, gemini-v01, perplexity-v01,
-cjt-v02  
 **Date:** May 2026  
-**Status:** Draft — flagged items require human review before finalizing  
-**Merged from:** `workflow-synthesis.md` + `summary.md` + `model-prompts.md`
+**Status:** Draft — flagged items require human review before finalizing
 
 ---
 
@@ -56,6 +53,9 @@ _Inputs:_
 - Any known constraints: time, data access, audience, deliverable type
 - Prior work or related documents if scope is being refined rather than created
   from scratch
+- What is the destination? (GitHub repo, Google Doc, grant portal, PDF)
+- Who is the audience and what format do they expect?
+- Are there intermediate deliverables along the way?
 
 _Process:_
 
@@ -232,3 +232,235 @@ _Human interaction:_
   Conflicts that cannot be resolved within the corpus get flagged for external
   verification in Validate. Unresolved questions may trigger a return to Scout
   for additional sources.
+
+---
+
+### 4. Build
+
+**Assemble the deliverable** Construct the primary output from the grounded
+materials produced in Scout and Ground. Build is the first phase where a
+complete, structured artifact takes shape. Every key claim entering the
+deliverable must have a source reference or an explicit uncertainty marker.
+
+_Inputs:_
+
+- Agreements memo
+- Conflicts memo
+- Unresolved questions memo
+- Research Brief (scope and audience reference)
+- Any additional materials specific to the deliverable type (outline, prior
+  draft, data file, code specification)
+
+_Process:_
+
+- Collect and label all Ground outputs into a single working file
+- Submit to a model with a structured assembly prompt specifying: the desired
+  output structure, the conflict resolution hierarchy, and the target format
+- Review the assembled draft against the Research Brief — confirm scope
+  boundaries have been respected
+- Mark every unresolved claim explicitly rather than letting it blend into the
+  prose
+
+_Conflict resolution hierarchy:_
+
+- Prefer factually documented positions over undocumented claims
+- Prefer positions consistent with official documentation over community
+  speculation
+- Note unresolved disagreements rather than silently choosing one
+
+_Output:_
+
+- Draft deliverable in target format (`YYYY-MM-DD_project_phase3_draft_v01.md`)
+
+_Human interaction:_
+
+- Medium. Human supplies the output structure and reviews the assembled draft.
+  The model does not decide what the deliverable should say — it assembles and
+  formats. Unresolved conflicts from Ground surface here as gaps the human must
+  fill before moving to Validate.
+
+---
+
+### 5. Validate
+
+Validate is about truth. The question it answers is: are the claims in this
+draft accurate and traceable? It is backward-looking — checking what was built
+against sources, facts, and prior commitments. The primary failure mode it
+catches is hallucination creep, where claims that entered without a source
+become indistinguishable from sourced ones after assembly.
+
+If you find a claim that cannot be traced to a source, that is a Validate
+problem. The output is a QA artifact — not a revised draft.
+
+_Inputs:_
+
+- Draft deliverable from Build
+- Agreements memo and conflicts memo from Ground
+- Research Brief (scope and exclusion criteria)
+- Source list with citations from Scout
+
+_Process:_
+
+- Build a Claim→Evidence table: for each key claim, identify the source,
+  evidence type, and confidence level
+- Spot-check citations — confirm sources say what the draft says they say
+- Check for model-name drift, version errors, and capability claims that may
+  have entered without verification
+- Flag every unsupported claim as either (CITE: needed) or (SPECULATION) — do
+  not silently remove or rewrite at this stage
+- Compare draft commitments against prior documents for contradictions
+
+_Output:_
+
+- Claim→Evidence table (`YYYY-MM-DD_project_phase4_claim-evidence_v01.md`)
+- Contradiction log if prior documents were checked
+  (`YYYY-MM-DD_project_phase4_contradiction-log_v01.md`)
+
+_Human interaction:_
+
+- High. A model can assist in building the Claim→Evidence table but the human
+  spot-checks the results. Flagged claims do not get silently resolved — each
+  one gets an explicit human decision: cite it, mark it as speculation, or
+  remove it. Unresolved flags carry forward to Synthesize as open items, not as
+  settled claims.
+
+---
+
+### 6. Synthesize
+
+Synthesize is about judgment. The question it answers is: does this draft say
+the right thing in the right way for this audience? It is forward-looking —
+calibrating tone, resolving remaining conflicts that Validate surfaced but
+couldn't settle, and making the final call on what the document argues. The
+output is a revised draft, not a QA artifact.
+
+If you find a claim that is accurate but poorly framed for the audience, that is
+a Synthesize problem. Synthesize leans on judgment about audience, tone, and
+institutional context — the kinds of decisions that are hard to delegate fully
+to a model.
+
+_Inputs:_
+
+- Validated draft from Validate
+- Claim→Evidence table
+- Contradiction log (if produced)
+- Any unresolved flags carried forward from Validate
+- Research Brief (audience and deliverable type reference)
+
+_Process:_
+
+- Review unresolved flags from Validate — make an explicit decision on each:
+  rewrite, remove, or accept with a caveat
+- Calibrate tone for the intended audience — adjust register, formality, and
+  framing without changing the underlying claims
+- Resolve remaining conflicts by applying the resolution hierarchy or by making
+  an explicit editorial judgment and noting it
+- Prune over-explanation — remove sections that are accurate but do not serve
+  the audience or the argument
+- Confirm the document argues what the Research Brief said it should argue
+
+_Output:_
+
+- Revised draft ready for Package (`YYYY-MM-DD_project_phase5_synthesis_v01.md`)
+- Editorial decisions log noting any conflicts resolved by judgment rather than
+  by evidence (`YYYY-MM-DD_project_phase5_decisions_v01.md`)
+
+_Human interaction:_
+
+- High. Synthesize is the phase most resistant to full delegation. A model can
+  propose rewrites and flag tone mismatches, but the human makes the final call
+  on what the document argues and how it speaks to its audience. Institutional
+  context, political subtext, and audience-specific framing require human
+  judgment that cannot be fully specified in a prompt.
+
+---
+
+### 7. Package
+
+Package is not only a terminal step — the delivery format should be declared in
+Define Scope and refined at each phase boundary. A document that is correct but
+delivered in the wrong format fails.
+
+The primary archive format is a GitHub repository. Intermediate and final
+deliverables in other formats — Google Doc, PDF, grant portal submission — are
+derived from the Markdown source.
+
+_Inputs:_
+
+- Revised draft from Synthesize
+- Delivery format decision from Define Scope
+- Audience and institutional context from Research Brief
+
+_Process:_
+
+- Confirm the delivery format against the original scope decision
+- Convert or format the Markdown source for the target destination:
+  - GitHub: commit the final Markdown file with a descriptive commit message
+  - Google Doc: export or paste; apply institutional formatting
+  - PDF: generate from Markdown or Google Doc; confirm layout before sending
+  - Grant portal: reformat to field-by-field requirements
+- Apply any governance or institutional framing required for the audience
+- Confirm no sensitive information (credentials, restricted data, FERPA,
+  OCAP®-sensitive content) is present before delivery
+
+_Output:_
+
+- Delivered artifact in target format
+- Final Markdown source committed to GitHub
+  (`YYYY-MM-DD_project_phase6_final_v01.md`)
+
+_Human interaction:_
+
+- Medium to high. Format conversion is largely mechanical but institutional
+  framing and sensitivity review require human judgment. The human confirms the
+  delivered artifact matches what the audience expects before release.
+
+---
+
+### 8. Archive
+
+Archive is a workflow integrity step, not a formality. The question it answers
+is not just "where does this live?" but "can someone reconstruct what happened
+and why?" A well-archived artifact includes the named file, the phase it came
+from, and enough context that the work does not have to be redone from scratch
+if you return to it in six months.
+
+The tension between Package and Archive is worth making explicit: Package
+optimizes for the external audience. Archive optimizes for your future self.
+These sometimes require different versions of the same document — a polished PDF
+for the funder, a raw Markdown file with all editorial decisions preserved for
+the record.
+
+_Inputs:_
+
+- All phase artifacts produced during the workflow (terrain note, source list,
+  debate list, source inventory, agreements, conflicts, unresolved questions,
+  draft, claim-evidence table, contradiction log, editorial decisions log, final
+  deliverable)
+- Delivery format decision from Define Scope
+
+_Process:_
+
+- Confirm every phase artifact is named using the naming convention
+  (`YYYY-MM-DD_project_phaseN_artifact_v01.md`)
+- Commit all Markdown artifacts to the GitHub repo with a descriptive commit
+  message
+- Confirm the repo README or a project note records: the original research
+  question, the scope boundaries, and the disposition of any unresolved
+  conflicts or flagged items
+- Store derived formats (PDF, Google Doc) in their intended locations
+- Note any artifacts that were intentionally not archived and why (sensitivity,
+  FERPA, OCAP®, confidentiality)
+
+_Output:_
+
+- A complete, navigable project record in the GitHub repo
+- A project note summarizing what was produced, what was resolved, and what
+  remains open (`YYYY-MM-DD_project_archive-note_v01.md`)
+
+_Human interaction:_
+
+- Medium. The naming and committing steps are largely mechanical. The project
+  note requires human judgment — it is the document your future self will read
+  first when returning to this work. Write it for someone who knows the field
+  but has forgotten the details of this specific project.
