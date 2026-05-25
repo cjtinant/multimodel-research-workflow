@@ -6,17 +6,10 @@ across four large language models: **ChatGPT**, **Claude**, **Gemini**, and
 
 ## Purpose
 
-This project documents how each model approaches the same multi-phase academic
-research workflow — from problem framing and literature review through drafting,
-data checking, and final verification — and synthesizes findings into a unified,
-model-agnostic workflow guide.
-
-## Docs
-
-| File                            | Description                                                                   |
-| ------------------------------- | ----------------------------------------------------------------------------- |
-| `03_docs/workflow-synthesis.md` | Canonical reference, operating doctrine, routing SOP, and project methodology |
-| `03_docs/model-roles.md`        | Role assignments and comparative strengths by model                           |
+This project develops a model-agnostic research workflow built on distributed AI
+tools. Each tool has a bounded role; each handoff produces a durable artifact.
+The workflow is designed to preserve executive function and reduce cognitive
+friction across long-running research tasks.
 
 ## Structure
 
@@ -29,13 +22,19 @@ model-agnostic workflow guide.
 05_archive/    version history and prior drafts
 ```
 
+## Docs
+
+| File                           | Description                             |
+| ------------------------------ | --------------------------------------- |
+| `03_docs/research-workflow.md` | Eight-phase research workflow reference |
+| `03_docs/model-roles.md`       | Role assignments and task routing       |
+
 ## Archive
 
-| Folder             | Contents                                              |
-| ------------------ | ----------------------------------------------------- |
-| `05_archive/v01/`  | Initial independent drafts — one per model            |
-| `05_archive/v02/`  | First cross-model comparison pass                     |
-| `05_archive/v03/`  | Refined role assignments and handoff points           |
-| `05_archive/v04/`  | Per-model synthesis drafts                            |
-| `05_archive/v05/`  | Intermediate synthesis documents                      |
-| `05_archive/v0-5/` | Earlier doc versions superseded by current `03_docs/` |
+| Folder            | Contents                                    |
+| ----------------- | ------------------------------------------- |
+| `05_archive/v01/` | Initial independent drafts — one per model  |
+| `05_archive/v02/` | First cross-model comparison pass           |
+| `05_archive/v03/` | Refined role assignments and handoff points |
+| `05_archive/v04/` | Per-model synthesis drafts                  |
+| `05_archive/v05/` | Intermediate synthesis documents            |

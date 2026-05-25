@@ -4,6 +4,29 @@ All notable changes to this project are documented here.
 
 ---
 
+## [2026-05-25] — Rename workflow-synthesis to research-workflow
+
+### Changed
+
+- `03_docs/workflow-synthesis.md` → `03_docs/research-workflow.md`
+- Simplified document header — removed date and status metadata (handled by git)
+
+## [2026-05-25] — Workflow synthesis revised
+
+### Changed
+
+- `03_docs/workflow-synthesis.md` — V02: removed model-specific discussion and
+  suggested prompts from workflow phases; phases now model-agnostic
+- `03_docs/workflow-synthesis.md` — added eight-phase term definitions (Define
+  Scope through Archive) with Inputs, Process, Output, and Human interaction for
+  each phase
+
+### Source provenance
+
+- V01 synthesized from: claude-v01, chatgpt-v01, gemini-v01, perplexity-v01,
+  cjt-v02
+- V02 removes model discussion from workflow phases and suggested prompts
+
 ## [2026-05-25] — Model roles updated
 
 ### Changed
@@ -29,7 +52,7 @@ All notable changes to this project are documented here.
 
 ## Document history
 
-### 03_docs/workflow-synthesis.md
+### 03_docs/research-workflow.md
 
 #### Current (merged May 2026)
 
