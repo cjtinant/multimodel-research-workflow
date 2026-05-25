@@ -4,6 +4,17 @@ All notable changes to this project are documented here.
 
 ---
 
+## [2026-05-25] — Model roles updated
+
+### Changed
+
+- `03_docs/model-roles.md` — merged v01 and v02; added disagreement table and
+  updated task routing to reflect current role assignments
+
+### Removed
+
+- Superseded working versions (`v0-5/`, `v05/`) — history in git
+
 ## [2026-05-25] — Initial public release
 
 ### Added
