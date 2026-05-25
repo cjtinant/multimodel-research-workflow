@@ -1,24 +1,3 @@
-# Research Workflow
-
----
-
-## Executive summary
-
-The multimodel research workflow routes each task to the model best suited for
-it. Each tool has a bounded role, each handoff produces a durable artifact, and
-uncertainty is flagged explicitly rather than blended away.
-
-## Introduction
-
-Primary bottlenecks in this research workflow relate to cognitive interruption,
-session continuity, startup friction, and context reloading. The workflow
-preserves executive function by distributing cognitive load across specialized
-tools rather than forcing one model to hold everything.
-
-> **Do not force every model to do every task.**
-
----
-
 ## Workflow overview
 
 The staged workflow follows eight phases. Each phase routes work to the model
@@ -33,6 +12,17 @@ artifact.
 6. Synthesize
 7. Package
 8. Archive
+
+The workflow is not strictly linear. Common return paths:
+
+- **Scout → Define Scope** — if the terrain looks different than expected, scope
+  boundaries may need revision before source retrieval begins
+- **Ground → Scout** — if unresolved questions cannot be addressed within the
+  corpus, additional sources may be needed before proceeding to Build
+- **Validate → Build** — if flagged claims require substantive revision rather
+  than simple citation, work returns to Build before Validate completes
+- **Synthesize → Define Scope** — if scope drift is discovered late, the
+  Research Brief may need revision before the document can be finalized
 
 ---
 
@@ -81,6 +71,10 @@ _Human interaction:_
 **Map the terrain** Develop a working picture of what is known, contested, and
 missing in a given area before beginning substantive work. Mapping precedes
 judgment — you are orienting, not concluding.
+
+The terrain note describes what exists in the landscape. The Research Brief
+describes what you intend to study. They should be read together but are not the
+same document — one is descriptive, the other prescriptive.
 
 _Inputs:_
 
@@ -142,6 +136,9 @@ conclusions — the corpus grounding phase will determine which debates are
 actually present in your sources. Debates are more useful than consensus for
 scoping: they reveal where judgment will be required.
 
+The candidate debate list becomes the agenda for the Ground phase — it shapes
+which conflicts the extraction passes are looking for.
+
 _Inputs:_
 
 - Annotated source list
@@ -172,10 +169,14 @@ within that set for the grounding phase. Adding sources mid-synthesis introduces
 untracked changes. The corpus is fixed when every source is uploaded, labeled,
 and confirmed.
 
+The candidate debate list from Scout serves as the agenda for the extraction
+passes — Ground confirms which of those debates are actually present in the
+corpus and which are not represented in the sources at hand.
+
 _Inputs:_
 
 - Annotated source list (finalized)
-- Candidate debate list
+- Candidate debate list from Scout
 
 _Process:_
 
@@ -227,10 +228,9 @@ _Human interaction:_
 
 - Medium to high. Human reviews each memo before running the next pass.
   Conflicts that cannot be resolved within the corpus get flagged for external
-  verification in Validate. Unresolved questions may trigger a return to Scout
-  for additional sources.
-
----
+  verification in Validate. Unresolved questions that cannot be addressed within
+  the corpus may trigger a return to Scout for additional sources before
+  proceeding to Build.
 
 ### 4. Build
 
