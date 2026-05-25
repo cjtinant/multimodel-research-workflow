@@ -1,11 +1,34 @@
 # Changelog
 
-## 03_docs/workflow-synthesis.md
+All notable changes to this project are documented here.
 
-### Current (merged May 2026)
+---
 
-Merged from workflow-synthesis.md (SOP), summary.md (synthesis output), and
-model-prompts.md (project background + model profiles). Adds:
+## [2026-05-25] — Initial public release
+
+### Added
+
+- `03_docs/workflow-synthesis.md` — canonical reference and SOP (see history
+  below)
+- `03_docs/model-roles.md` — finalized role assignments
+- `05_archive/v01–v05/` — full version history of per-model and synthesis drafts
+- `README.md`, `CHANGELOG.md`, `.gitignore`
+
+---
+
+## Document history
+
+### 03_docs/workflow-synthesis.md
+
+#### Current (merged May 2026)
+
+Merged from three source documents:
+
+- `workflow-synthesis.md` — procedural SOP
+- `summary.md` — synthesis output and routing tables
+- `model-prompts.md` — project background and model profiles
+
+Additions in the merge:
 
 - Background and cognitive-continuity framing
 - Extended model profiles with characterizations
@@ -13,32 +36,47 @@ model-prompts.md (project background + model profiles). Adds:
 - Cyberinfrastructure integration (Chromebook / CyVerse / Jetstream2)
 - Project methodology appendix (4 research questions + synthesis prompts)
 
-### v03 (workflow-synthesis_v03.md → 05_archive/v05/)
+#### v03 → `05_archive/v05/workflow-synthesis_v03.md`
 
 Intermediate version with role-checking pass.
 
-### v02 (workflow-synthesis_v02_check-roles.md → 05_archive/v05/)
+#### v02 → `05_archive/v05/workflow-synthesis_v02_check-roles.md`
 
 Check-roles working version.
 
-### v01 (synthesis-final.md → merged into current)
+#### v01 → merged into current
 
 Initial synthesis combining per-model v01–v04 inputs.
 
-## Per-model drafts
+---
 
-### v04 — per-model synthesis drafts
+### 03_docs/model-roles.md
 
-Individual synthesis outputs from ChatGPT, Claude, Gemini, and Perplexity.
+#### Current
 
-### v03 — refined cross-model comparison
+Finalized from working version.
+
+#### v0-5 → `05_archive/v0-5/model-roles.md`
+
+Earlier promoted version, superseded by current.
+
+---
+
+### Per-model drafts
+
+#### v04 — per-model synthesis drafts → `05_archive/v04/`
+
+Individual synthesis outputs from ChatGPT, Claude, Gemini, and Perplexity, each
+working from the v03 inputs.
+
+#### v03 — refined cross-model comparison → `05_archive/v03/`
 
 Focused revision of role assignments and handoff points.
 
-### v02 — first cross-model comparison pass
+#### v02 — first cross-model comparison pass → `05_archive/v02/`
 
 First structured comparison across all four model outputs.
 
-### v01 — initial independent drafts
+#### v01 — initial independent drafts → `05_archive/v01/`
 
 Each model given the same prompt; outputs captured independently.
