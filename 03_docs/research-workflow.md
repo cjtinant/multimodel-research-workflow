@@ -1,7 +1,4 @@
-# Multi-model AI-assisted workflow — reference and SOP
-
-**Date:** May 2026  
-**Status:** Draft — flagged items require human review before finalizing
+# Research Workflow
 
 ---
 
