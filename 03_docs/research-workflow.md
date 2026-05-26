@@ -327,7 +327,9 @@ _Process:_
 
 _Output:_
 
-- Claim→Evidence table (`YYYY-MM-DD_project_phase4_claim-evidence_v01.md`)
+- Reviewer notes and edit list
+  (`YYYY-MM-DD_project_phase4_reviewer-notes_v01.md`)
+- Claim→Evidence table (`YYYY-MM-DD_project_phase4_claim-evidence_v01.xlsx`)
 - Contradiction log if prior documents were checked
   (`YYYY-MM-DD_project_phase4_contradiction-log_v01.md`)
 
