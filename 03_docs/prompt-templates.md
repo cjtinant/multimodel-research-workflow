@@ -21,6 +21,21 @@ Examples:
 
 ---
 
+## Quick reference — phase assignments
+
+| Phase        | Do this                                            | With this tool                |
+| ------------ | -------------------------------------------------- | ----------------------------- |
+| Define scope | Draft Research Brief                               | Any capable model             |
+| Scout        | Map terrain, find and retrieve sources             | Perplexity Pro / Best         |
+| Ground       | Stabilize corpus, extract agreements and conflicts | NotebookLM                    |
+| Build        | Construct deliverable — draft, code, SOP           | Claude Sonnet adaptive        |
+| Validate     | Stress-test argument, check claims                 | ChatGPT Thinking + Perplexity |
+| Synthesize   | Calibrate tone, resolve conflicts, final judgment  | ChatGPT Thinking              |
+| Package      | Final assembly, format for destination             | Claude Sonnet adaptive        |
+| Archive      | Freeze named artifact in durable location          | Obsidian / GitHub / Drive     |
+
+---
+
 ## Failure modes and corrective moves
 
 | Symptom                                   | Corrective move                                                                        |
