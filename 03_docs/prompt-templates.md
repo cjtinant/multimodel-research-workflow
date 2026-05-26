@@ -161,6 +161,21 @@ Then produce a 2–3 page Synthesis Memo with:
 
 Use when synthesizing a fixed corpus of documents through NotebookLM.
 
+### Notebook setup
+
+Complete before running any prompts.
+
+1. Verify all source documents exist and are finalized.
+2. Log into Google Workspace to ensure session isolation.
+3. Launch NotebookLM and create a new isolated notebook.
+4. Upload source documents via the Sources panel. Label each source using a
+   consistent naming convention: `NN_model-name_version.md` (e.g.
+   `01_claude_v03.md`)
+5. Confirm all sources appear in the Sources panel before proceeding.
+6. Open a fresh chat thread. Do not continue from a prior session.
+
+---
+
 ### Single-pass prompt (quick synthesis)
 
 Use for working drafts, orientation passes, or input to a subsequent staged
