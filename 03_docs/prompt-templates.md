@@ -491,6 +491,13 @@ either removal or rewording.
 
 **Save as:** `YYYY-MM-DD_project_phase4_claim-evidence_v01.xlsx`
 
+**Additional QC checks:**
+
+- [ ] Each major claim can be traced to at least one source
+- [ ] Sensitivity context is present if applicable to the audience (e.g.
+      TCU/OCAP®/OLC, FERPA, institutional review)
+- [ ] Operating doctrine or key framing ends with a clear, actionable statement
+
 ---
 
 ## Synthesis prompts
