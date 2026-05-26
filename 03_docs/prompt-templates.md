@@ -356,6 +356,42 @@ YYYY-MM-DD_project_notebooklm-overview_v01.mp3
 
 ---
 
+## Build — Final assembly
+
+Use after completing the Ground phase to assemble extracted outputs into a final
+document.
+
+**Inputs:** collected and labeled Ground outputs in a single working file.
+
+**Prompt (copy/paste):**
+
+```
+I have completed a synthesis of source documents. The attached file contains
+extracted sections labeled by topic or prompt number.
+
+Please assemble these into a final document with the following structure:
+  [specify your desired sections here]
+
+Where sources agree, present the consensus directly. Where they conflict,
+apply this resolution hierarchy:
+  - Prefer factually documented positions over undocumented claims
+  - Prefer positions consistent with official documentation over community
+    speculation
+  - Note unresolved disagreements rather than silently choosing one
+
+Format as clean Markdown.
+```
+
+**Gate (done when):**
+
+- Every section maps to at least one Ground output
+- Unresolved conflicts are flagged explicitly, not averaged away
+- Document is ready for Validate
+
+**Save as:** `YYYY-MM-DD_project_phase3_draft_v01.md`
+
+---
+
 ## Validate — Skeptical Reviewer
 
 **Purpose:** Stress-test argument before polishing prose. Surfaces hidden
