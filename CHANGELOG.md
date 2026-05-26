@@ -4,12 +4,37 @@ All notable changes to this project are documented here.
 
 ---
 
-## [2026-05-25] — Rename workflow-synthesis to research-workflow
+## [2026-05-25] — Docs restructured and cross-checked
+
+### Renamed
+
+- `03_docs/workflow-synthesis.md` → `03_docs/research-workflow.md`
+- Document header simplified — date and status metadata removed (handled by git)
+
+### Added
+
+- `03_docs/prompt-templates.md` — copy-paste prompts for each workflow phase,
+  including quick reference table, notebook setup, Build final assembly prompt,
+  and QC checks
 
 ### Changed
 
-- `03_docs/workflow-synthesis.md` → `03_docs/research-workflow.md`
-- Simplified document header — removed date and status metadata (handled by git)
+- `03_docs/research-workflow.md` — section heading updated to "Workflow Steps";
+  added workflow return paths (directed graph note); clarified terrain note vs
+  Research Brief distinction; added Scout→Ground handoff note; added Synthesize
+  context-specific placeholder stubs (grant writing, institutional framing,
+  TCU/sovereignty)
+- `03_docs/research-workflow.md` — Validate outputs updated: claim-evidence
+  artifact changed to `.csv`; reviewer-notes artifact added
+- `README.md` — updated purpose, docs table, and tool assignments table; removed
+  stale `05_archive/v0-5/` reference
+
+### Removed
+
+- `03_docs/model-roles.md` — content consolidated into README tool assignments
+  table and `03_docs/prompt-templates.md` quick reference
+
+---
 
 ## [2026-05-25] — Workflow synthesis revised
 
@@ -27,6 +52,8 @@ All notable changes to this project are documented here.
   cjt-v02
 - V02 removes model discussion from workflow phases and suggested prompts
 
+---
+
 ## [2026-05-25] — Model roles updated
 
 ### Changed
@@ -38,12 +65,13 @@ All notable changes to this project are documented here.
 
 - Superseded working versions (`v0-5/`, `v05/`) — history in git
 
+---
+
 ## [2026-05-25] — Initial public release
 
 ### Added
 
-- `03_docs/workflow-synthesis.md` — canonical reference and SOP (see history
-  below)
+- `03_docs/workflow-synthesis.md` — canonical reference and SOP
 - `03_docs/model-roles.md` — finalized role assignments
 - `05_archive/v01–v05/` — full version history of per-model and synthesis drafts
 - `README.md`, `CHANGELOG.md`, `.gitignore`
@@ -54,21 +82,17 @@ All notable changes to this project are documented here.
 
 ### 03_docs/research-workflow.md
 
-#### Current (merged May 2026)
+#### Current
 
-Merged from three source documents:
+Renamed from `workflow-synthesis.md`. Major revision: eight-phase workflow
+definitions with full Inputs/Process/Output/Human interaction for each phase.
+Model-agnostic throughout. Synthesize context-specific stubs added.
 
-- `workflow-synthesis.md` — procedural SOP
-- `summary.md` — synthesis output and routing tables
-- `model-prompts.md` — project background and model profiles
+#### workflow-synthesis.md (merged May 2026)
 
-Additions in the merge:
-
-- Background and cognitive-continuity framing
-- Extended model profiles with characterizations
-- Distributed AI harness concept
-- Cyberinfrastructure integration (Chromebook / CyVerse / Jetstream2)
-- Project methodology appendix (4 research questions + synthesis prompts)
+Merged from three source documents: `workflow-synthesis.md` (procedural SOP),
+`summary.md` (synthesis output and routing tables), `model-prompts.md` (project
+background and model profiles).
 
 #### v03 → `05_archive/v05/workflow-synthesis_v03.md`
 
@@ -84,24 +108,11 @@ Initial synthesis combining per-model v01–v04 inputs.
 
 ---
 
-### 03_docs/model-roles.md
-
-#### Current
-
-Finalized from working version.
-
-#### v0-5 → `05_archive/v0-5/model-roles.md`
-
-Earlier promoted version, superseded by current.
-
----
-
 ### Per-model drafts
 
 #### v04 — per-model synthesis drafts → `05_archive/v04/`
 
-Individual synthesis outputs from ChatGPT, Claude, Gemini, and Perplexity, each
-working from the v03 inputs.
+Individual synthesis outputs from ChatGPT, Claude, Gemini, and Perplexity.
 
 #### v03 — refined cross-model comparison → `05_archive/v03/`
 

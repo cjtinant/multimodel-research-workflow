@@ -23,22 +23,20 @@ friction across long-running research tasks.
 | File                           | Description                                |
 | ------------------------------ | ------------------------------------------ |
 | `03_docs/research-workflow.md` | Eight-phase research workflow reference    |
-| `03_docs/model-roles.md`       | Role assignments and task routing          |
 | `03_docs/prompt-templates.md`  | Copy-paste prompts for each workflow phase |
 
 ## Current tool assignments (as of 2026-05-25)
 
-| Phase              | Task                                 | Tool                          |
-| ------------------ | ------------------------------------ | ----------------------------- |
-| Define scope       | Research Brief                       | Any capable model             |
-| Scout              | Terrain mapping, source discovery    | Perplexity Pro / Best         |
-| Ground             | Corpus stabilization, extraction     | NotebookLM                    |
-| Build              | Drafting, coding, SOPs, Markdown     | Claude Sonnet adaptive        |
-| Build (escalation) | Hard reasoning, complex architecture | Claude Opus adaptive          |
-| Validate           | Argument stress-test, claim checking | ChatGPT Thinking + Perplexity |
-| Synthesize         | Tone, governance, final judgment     | ChatGPT Thinking              |
-| Package            | Final assembly, Markdown formatting  | Claude Sonnet adaptive        |
-| Archive            | Workspace placement, Drive           | Gemini (selective)            |
+| Phase        | Do this                                            | With this tool                |
+| ------------ | -------------------------------------------------- | ----------------------------- |
+| Define scope | Draft Research Brief                               | Any capable model             |
+| Scout        | Map terrain, find and retrieve sources             | Perplexity Pro / Best         |
+| Ground       | Stabilize corpus, extract agreements and conflicts | NotebookLM                    |
+| Build        | Construct deliverable — draft, code, SOP           | Claude Sonnet adaptive        |
+| Validate     | Stress-test argument, check claims                 | ChatGPT Thinking + Perplexity |
+| Synthesize   | Calibrate tone, resolve conflicts, final judgment  | ChatGPT Thinking              |
+| Package      | Final assembly, format for destination             | Claude Sonnet adaptive        |
+| Archive      | Freeze named artifact in durable location          | Obsidian / GitHub / Drive     |
 
 ## Archive
 
