@@ -418,3 +418,13 @@ source-corpus synthesis.
 7. **Archive** — Freeze the output as a named artifact in Obsidian, GitHub,
    or Google Drive. Do not leave important work only in chat history.
 ```
+
+## Conflicts log
+
+| #   | Topic              | Nature of conflict                                      | Sources                            |
+| --- | ------------------ | ------------------------------------------------------- | ---------------------------------- |
+| C1  | Final polish tool  | Claude (default) vs. ChatGPT vs. Claude-then-Gemini     | All five                           |
+| C3  | Gemini role        | Archiving/infrastructure only vs. active synthesis step | gemini-v01 vs. all others          |
+| C4  | Perplexity scope   | Discovery only vs. broader synthesis contribution       | chatgpt-v01, claude-v01 vs. others |
+| C5  | NotebookLM scope   | Bounded evidence room vs. general synthesis assistant   | claude-v01 vs. gemini-v01          |
+| C6  | File upload labels | Correct mapping vs. transposed table in cjt-v02         | cjt-v02 vs. all others             |

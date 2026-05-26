@@ -26,7 +26,7 @@ The workflow is not strictly linear. Common return paths:
 
 ---
 
-## Discussion of terms
+## Workflow Steps
 
 ### 1. Define scope
 
