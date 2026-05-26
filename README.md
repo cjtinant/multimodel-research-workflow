@@ -1,9 +1,5 @@
 # Multimodel research workflow
 
-A structured comparison and harmonization of AI-assisted research workflows
-across four large language models: **ChatGPT**, **Claude**, **Gemini**, and
-**Perplexity**.
-
 ## Purpose
 
 This project develops a model-agnostic research workflow built on distributed AI
@@ -24,10 +20,25 @@ friction across long-running research tasks.
 
 ## Docs
 
-| File                           | Description                             |
-| ------------------------------ | --------------------------------------- |
-| `03_docs/research-workflow.md` | Eight-phase research workflow reference |
-| `03_docs/model-roles.md`       | Role assignments and task routing       |
+| File                           | Description                                |
+| ------------------------------ | ------------------------------------------ |
+| `03_docs/research-workflow.md` | Eight-phase research workflow reference    |
+| `03_docs/model-roles.md`       | Role assignments and task routing          |
+| `03_docs/prompt-templates.md`  | Copy-paste prompts for each workflow phase |
+
+## Current tool assignments (as of 2026-05-25)
+
+| Phase              | Task                                 | Tool                          |
+| ------------------ | ------------------------------------ | ----------------------------- |
+| Define scope       | Research Brief                       | Any capable model             |
+| Scout              | Terrain mapping, source discovery    | Perplexity Pro / Best         |
+| Ground             | Corpus stabilization, extraction     | NotebookLM                    |
+| Build              | Drafting, coding, SOPs, Markdown     | Claude Sonnet adaptive        |
+| Build (escalation) | Hard reasoning, complex architecture | Claude Opus adaptive          |
+| Validate           | Argument stress-test, claim checking | ChatGPT Thinking + Perplexity |
+| Synthesize         | Tone, governance, final judgment     | ChatGPT Thinking              |
+| Package            | Final assembly, Markdown formatting  | Claude Sonnet adaptive        |
+| Archive            | Workspace placement, Drive           | Gemini (selective)            |
 
 ## Archive
 
