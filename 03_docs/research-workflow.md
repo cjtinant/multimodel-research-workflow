@@ -1,3 +1,20 @@
+# Research Workflow
+
+## Executive summary
+
+The multimodel research workflow routes each task to the model best suited for
+it. Each tool has a bounded role, each handoff produces a durable artifact, and
+uncertainty is flagged explicitly rather than blended away.
+
+## Introduction
+
+Primary bottlenecks in this research workflow relate to cognitive interruption,
+session continuity, startup friction, and context reloading. The workflow
+preserves executive function by distributing cognitive load across specialized
+tools rather than forcing one model to hold everything.
+
+> **Do not force every model to do every task.**
+
 ## Workflow overview
 
 The staged workflow follows eight phases. Each phase routes work to the model
@@ -372,6 +389,12 @@ _Human interaction:_
   on what the document argues and how it speaks to its audience. Institutional
   context, political subtext, and audience-specific framing require human
   judgment that cannot be fully specified in a prompt.
+
+_Context-specific considerations:_
+
+- Grant writing: (to be documented)
+- Institutional framing: (to be documented)
+- TCU/sovereignty considerations: (to be documented)
 
 ---
 
