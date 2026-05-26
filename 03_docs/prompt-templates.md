@@ -504,7 +504,7 @@ either removal or rewording.
 - All citations resolve and match the bibliography.
 - You can answer "Where did this come from?" for every important sentence.
 
-**Save as:** `YYYY-MM-DD_project_phase4_claim-evidence_v01.xlsx`
+**Save as:** `YYYY-MM-DD_project_phase4_claim-evidence_v01.csv`
 
 **Additional QC checks:**
 
