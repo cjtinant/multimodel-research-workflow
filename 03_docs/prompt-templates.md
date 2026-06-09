@@ -80,7 +80,7 @@ Ask me 10 clarifying questions. Then produce a 1-page brief with:
 
 ---
 
-## Scout — Literature Review & Discovery
+## Scout — Literature Review & Discovery -- TRACK 1
 
 **Purpose:** Surface seminal and high-signal literature and active debates,
 producing an audit-ready annotated bibliography.
@@ -130,6 +130,84 @@ citations on each side.
   one methods paper if available.
 
 **Save as:** `YYYY-MM-DD_project_phase1_bibliography_v01.csv`
+
+## Scout — Planning Grant Landscape Review -- TRACK 2
+
+**Purpose:** Map the funded and policy landscape to establish the gap this
+proposal fills, identify non-overlap risks, and surface precedent for the
+proposed approach. The primary deliverable is a gap statement with supporting
+evidence, not an annotated bibliography.
+
+**Inputs:**
+
+- Topic statement (1–2 sentences)
+- Proposal intent (what you are asking NSF to fund)
+- Scope bounds (what's in / what's out)
+- Program solicitation (NSF TCUP, TEA-Center requirements, or equivalent)
+- Known awards to assess for overlap (list by title, award number, PI, and
+  institution if available)
+- Time window (default: 2022–2026)
+
+---
+
+**Prompt — Track 1: Peer and policy literature (establish need)**
+
+Find peer-reviewed papers, government reports, and policy documents on [TOPIC]
+published 2022–2026. Return 8–15 items that establish: (a) the documented need
+this proposal addresses, (b) precedent for the proposed approach, and (c) known
+limitations of existing efforts. For each item:
+
+full citation (APA or BibTeX-ready), DOI or stable URL, 1–2 sentence summary of
+the finding relevant to the need, which part of the proposal argument it
+supports (need / precedent / gap).
+
+Do not return items that cannot be linked to (a), (b), or (c).
+
+**Prompt — Track 2: Funded project landscape (non-overlap)**
+
+Search NSF Awards (nsf.gov/awardsearch), NIH Reporter, or other relevant
+databases for funded projects related to [TOPIC AREA] active 2022–2026. Include
+any awards I have listed below as known overlap candidates. For each project:
+
+award title, funder, award number, PI, institution, dates, amount 1–2 sentence
+description of scope overlap assessment: overlapping / adjacent / complementary
+— and why if overlapping: what specifically would need to differ in the new
+proposal to avoid duplication
+
+[INSERT KNOWN AWARDS HERE]
+
+---
+
+**Expected output:**
+
+- Landscape table: funded projects with overlap assessment (Track 2 output)
+- Source list: peer/policy literature with proposal-function tags (Track 1
+  output)
+- Gap memo: 1–2 paragraphs stating the gap this proposal fills, grounded in both
+  tracks
+
+**Gate (done when):**
+
+- Every known competing or adjacent award has an overlap assessment
+- You can state the gap in one sentence, citing at least two sources
+- At least one prior funded project or published program demonstrates the
+  approach is viable (precedent)
+- No row in the landscape table is left as "overlapping" without a resolution:
+  either a clear differentiation or an explicit risk flag for the PI
+
+**Optional guardrails:**
+
+- Verification rule: confirm award numbers and dates against the funder's
+  database directly, not secondary sources
+- Repro rule: store the exact prompt + date run + databases searched in
+  `/log/lit_search/`
+- Program rule: pull the solicitation language for any eligibility or
+  non-overlap requirements and store it alongside the landscape table
+
+**Save as:**
+
+- `YYYY-MM-DD_project_phase1_landscape-table_v01.csv`
+- `YYYY-MM-DD_project_phase1_gap-memo_v01.md`
 
 ---
 
